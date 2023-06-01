@@ -1,9 +1,8 @@
 
-
-
 ///////////////////////////////////////////////////////////////
 
 function calculate() {
+
   validate();
 
   var num1 = parseFloat(document.getElementById("num1").value);
@@ -15,12 +14,10 @@ function calculate() {
   var expression = num1 + operator1 + num2 + operator2 + num3;
   var result = eval(expression);
 
-  document.getElementById("result").innerHTML =
-    '<div class="m-3 text-success fw-bold fs-4">Result: ' + result + "</div>";
+  document.getElementById("result").innerHTML = '<div class="m-3 text-success fw-bold fs-4">Result: ' + result + "</div>";
 }
 
-
-//////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
 
 function validate(){
 
@@ -35,6 +32,7 @@ function validate(){
     } else{
       document.getElementById("op1Er").innerHTML="";
     }
+
     if (operator2 === "") {
       document.getElementById("op2Er").innerHTML="Please select operator";
     } else{
