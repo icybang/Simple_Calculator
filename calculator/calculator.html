@@ -10,54 +10,66 @@
 
 <body>
 
-  <div class="container bg-success-subtle mt-5 p-3 col-md-5 rounded-4 shadow-lg">
+  <div class="container bg-success-subtle mt-5 p-3 col-md-9 rounded-4 shadow-lg">
     <h1 class="text-center">Calculator</h1> 
     <div class="row justify-content-center">
-      <div class="col-md-8">
+      <div class="col-md-10">
         <form class="mb-4">
 
-          <div class="mb-3">
+        <div class="row">
+          <div class="mb-3 col">
             <label for="num1" class="form-label">Number 1:</label>
             <input type="number" class="form-control" id="num1" required autofocus oninput="validate()">    
             <!-- Error message -->
             <p class="text-center text-danger" id="num1Er"></p>
           </div>
 
-          <div class="mb-3">
+          <div class="mb-3 col-1">
+            <label for="operator1" class="form-label">operator</label>
+          <select id="operator1" class="form-select">
+            <option value=""></option>
+             <option value="-">-</option>
+            <option value="+" >+</option>
+            <option value="*" >*</option>
+            <option value="/" >/</option>
+          </select>
+          </div>
+
+          <div class="mb-3 col" >
             <label for="num2" class="form-label">Number 2:</label>
             <input type="number" class="form-control" id="num2" required autofocus oninput="validate()">
             <!-- Error message -->
             <p class="text-center text-danger" id="num2Er"></p>
           </div>
 
-          <div class="mb-3">
-            <label class="form-label">Operation:</label>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="operation" id="addition" value="addition" required onchange="validate()">
-              <label class="form-check-label" for="addition">Addition</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="operation" id="subtraction" value="subtraction" required onchange="validate()">
-              <label class="form-check-label" for="subtraction">Subtraction</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="operation" id="multiplication" value="multiplication" required onchange="validate()">
-              <label class="form-check-label" for="multiplication">Multiplication</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="operation" id="division" value="division" required onchange="validate()">
-              <label class="form-check-label" for="division">Division</label>
-            </div>
+          <div class="mb-3 col-1">
+            <label for="operator2" class="form-label">operator</label>
+            <select id="operator2" class="form-select">
+            <option value=""></option>
+            <option value="-">-</option>
+            <option value="+" >+</option>
+            <option value="*" >*</option>
+            <option value="/" >/</option>
+          </select>
           </div>
-          <!-- Error message -->
-          <p class="text-center text-danger" id="opr" ></p>
+
+            <div class="mb-3 col" >
+            <label for="num3" class="form-label">Number 3:</label>
+            <input type="number" class="form-control" id="num3" required autofocus oninput="validate()">
+            <!-- Error message -->
+            <p class="text-center text-danger" id="num3Er"></p>
+          </div>
+          </div>
+       
 
           <!-- result -->
           <div id="result" class="text-center">Answer</div><br>
 
           <!-- -->
-          <button type="button" class="btn btn-primary" onclick="calculate()">Calculate</button>
 
+          <div class="text-center mt-5">
+          <button type="button" class="btn btn-primary " onclick="calculate()">Calculate</button>
+        </div>
         </form>
 
       </div>

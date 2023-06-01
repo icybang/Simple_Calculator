@@ -25,17 +25,18 @@ function calculate() {
 function validate(){
     var num1 = parseFloat(document.getElementById("num1").value);
     var num2 = parseFloat(document.getElementById("num2").value);
-    var operation = document.querySelector('input[name="operation"]:checked');
+    var num3 = parseFloat(document.getElementById("num3").value);
 
     if (isNaN(num1)){
     document.getElementById("num1Er").innerHTML="Please Enter a Valid Number"
-    } else document.getElementById("num1Er").innerHTML=""
+    } else document.getElementById("num1Er").innerHTML="";
 
     if (isNaN(num2)){
     document.getElementById("num2Er").innerHTML="Please Enter a Valid Number"
-    } else document.getElementById("num2Er").innerHTML=""
+    } else document.getElementById("num2Er").innerHTML="";
 
-    if (!operation) {
-    document.getElementById("opr").innerHTML="Please select Operation"
-    } else document.getElementById("opr").innerHTML=""
+    if (isNaN(num3)){
+      document.getElementById("num3Er").innerHTML="Please Enter a Valid Number"
+      } else document.getElementById("num3Er").innerHTML="";
+
 }
